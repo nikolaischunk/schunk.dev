@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 9
   cacheKey: 10c0
 
 "@alloc/quick-lru@npm:^5.2.0":
@@ -4241,6 +4241,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "schunk.dev@workspace:."
   dependencies:
+    "@next/swc-darwin-arm64": "npm:16.2.4"
+    "@next/swc-darwin-x64": "npm:16.2.4"
+    "@next/swc-linux-x64-gnu": "npm:16.2.4"
     "@tailwindcss/postcss": "npm:^4"
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
@@ -4254,6 +4257,13 @@ __metadata:
     react-dom: "npm:19.2.4"
     tailwindcss: "npm:^4"
     typescript: "npm:^5"
+  dependenciesMeta:
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
   languageName: unknown
   linkType: soft
 
