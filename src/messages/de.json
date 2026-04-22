@@ -10,34 +10,34 @@
   "hero": {
     "greeting": "Hey, ich bin",
     "name": "Nikolai Schunk",
-    "tagline": "Begeistert vom Code. Stark mit Menschen. Liefert Ergebnisse.",
+    "tagline": "Codeenthusiast. Gut mit Menschen. Bringt Dinge zum Laufen.",
     "location": "Zürich, Schweiz",
     "cta": "Meine Arbeit",
     "available": "Offen für Möglichkeiten"
   },
   "about": {
     "title": "Über mich",
-    "p1": "Ich bin ein frontend-fokussierter Softwareentwickler aus Zürich, tätig in einem internationalen Tech-Beratungsunternehmen. Mein Stack dreht sich um TypeScript und Next.js — bei Bedarf bin ich aber auch im Backend zuhause.",
-    "p2": "Mir ist wichtig, Dinge zu bauen, die wirklich genutzt werden. Nicht sauberer Code um seiner selbst willen, sondern Produkte, mit denen Menschen interagieren und die einen echten Mehrwert bieten. Ich bringe sowohl technische Tiefe als auch die Kommunikationsfähigkeiten mit, um effektiv mit Teams und Stakeholdern zu arbeiten."
+    "p1": "Ich bin ein frontend-fokussierter Softwareentwickler aus Zürich, tätig in einem internationalen Tech-Beratungsunternehmen. Mein Stack dreht sich um TypeScript und Next.js, bei Bedarf bin ich aber auch im Backend zuhause.",
+    "p2": "Ich schreibe Code, der verstanden werden wird. Klar, einfach, auf den Punkt. Die richtigen modernen Tools zu kennen und einzusetzen ist für mich der Unterschied zwischen einem trägen Prozess und einem effizienten, lösungsorientierten Workflow. Einfach halten ist für mich kein Kompromiss, es ist ein Prinzip."
   },
   "human": {
     "title": "Mensch",
     "subtitle": "Jenseits der Tastatur",
     "items": [
       {
-        "icon": "🏋️",
-        "title": "Trainingsleiter beim ASVZ",
-        "desc": "Ich leite Fitnesstrainings beim Akademischen Sportzentrum Zürich."
+        "icon": "👤",
+        "title": "Volleyball-TL beim ASVZ",
+        "desc": "Trainingsleiter für Volleyball beim Akademischen Sportzentrum Zürich."
       },
       {
         "icon": "🏐",
-        "title": "Volleyball-Trainer",
-        "desc": "Trainer beim lokalen Verein — Teams führen, Strategie entwickeln, Spieler fördern."
+        "title": "Volleyball-Trainer beim VBC Rämi",
+        "desc": "Trainer beim Verein: Teams führen, Strategie entwickeln, Spieler fördern."
       },
       {
         "icon": "⛷️",
         "title": "Skilehrer",
-        "desc": "Skifahren beibringen auf der Piste — Geduld, klare Kommunikation und Menschenkenntnis."
+        "desc": "Skifahren beibringen braucht Geduld, klare Kommunikation und ein gutes Gespür für Menschen."
       }
     ]
   },
@@ -46,16 +46,29 @@
     "subtitle": "Meine bevorzugten Tools",
     "categories": [
       {
+        "name": "Sprachen",
+        "items": ["TypeScript", "Java", "Python", "PHP"]
+      },
+      {
         "name": "Frontend",
-        "items": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Framer Motion"]
+        "items": ["Next.js", "React", "Angular", "Tailwind CSS", "Framer Motion"]
       },
       {
         "name": "Backend",
-        "items": ["Node.js", "REST APIs", "PostgreSQL", "MongoDB", "Spring Boot"]
+        "items": ["Node.js", "REST APIs", "PostgreSQL", "Redis", "Spring Boot"]
       },
       {
         "name": "Tools",
-        "items": ["Git", "Docker", "Vercel", "Figma", "VS Code"]
+        "items": [
+          "Git",
+          "Docker",
+          "Vercel",
+          "Cloudflare",
+          "Claude",
+          "Linux",
+          "Figma",
+          "VS Code"
+        ]
       }
     ]
   },
@@ -65,7 +78,7 @@
     "items": [
       {
         "name": "Birthdayy",
-        "desc": "Ein Discord-Bot und eine Web-App zum Verwalten von Geburtstagen in Servern — genutzt von tausenden Communities. Das komplette Produkt: von Bot bis Landingpage.",
+        "desc": "Ein Discord-Bot und eine Web-App zum Verwalten von Geburtstagen in Servern, genutzt von tausenden Communities. Das komplette Produkt von Bot bis Landingpage.",
         "tags": ["TypeScript", "Next.js", "Discord API"],
         "url": "https://birthdayy.app"
       },
@@ -103,7 +116,7 @@
   "contact": {
     "title": "Kontakt",
     "subtitle": "Lass uns etwas bauen.",
-    "desc": "Ob Projekt, Frage oder einfach ein Gespräch — ich bin erreichbar.",
+    "desc": "Ob Projekt, Frage oder einfach ein Gespräch, ich bin erreichbar.",
     "email": "Schreib mir",
     "github": "GitHub",
     "linkedin": "LinkedIn"

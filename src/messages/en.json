@@ -17,27 +17,27 @@
   },
   "about": {
     "title": "About",
-    "p1": "I'm a frontend-focused software engineer based in Zurich, working at an international tech consulting firm. My stack revolves around TypeScript and Next.js — but I'm comfortable across the full stack when needed.",
-    "p2": "I care about building things that actually get used. Not just clean code for its own sake, but products that people interact with and find valuable. I bring both technical depth and the communication skills to work effectively with teams and stakeholders."
+    "p1": "I'm a frontend-focused software engineer based in Zurich, working at an international tech consulting firm. My stack revolves around TypeScript and Next.js, though I'm comfortable across the full stack when needed.",
+    "p2": "I write code that's meant to be understood: simple, clear, and to the point. Knowing the right modern tools is what makes the difference between a slow process and a sharp, solution-oriented workflow. For me, keeping things simple isn't a limitation, it's a principle."
   },
   "human": {
     "title": "Human",
     "subtitle": "Beyond the keyboard",
     "items": [
       {
-        "icon": "🏋️",
-        "title": "Training Lead at ASVZ",
-        "desc": "Running fitness training sessions at the University Sports association of Zurich."
+        "icon": "👤",
+        "title": "Volleyball Training Lead at ASVZ",
+        "desc": "Leading volleyball training sessions at the University Sports Association of Zurich."
       },
       {
         "icon": "🏐",
-        "title": "Volleyball Coach",
-        "desc": "Coaching volleyball at my local club — leading teams, building strategy, developing players."
+        "title": "Volleyball Coach at VBC Rämi",
+        "desc": "Coaching at my local club, leading teams, building strategy, and developing players."
       },
       {
         "icon": "⛷️",
         "title": "Ski Instructor",
-        "desc": "Teaching skiing on the slopes — patience, clear communication, and reading people."
+        "desc": "Teaching skiing means patience, clear communication, and reading people."
       }
     ]
   },
@@ -46,16 +46,29 @@
     "subtitle": "The tools I reach for",
     "categories": [
       {
+        "name": "Languages",
+        "items": ["TypeScript", "Java", "Python", "PHP"]
+      },
+      {
         "name": "Frontend",
-        "items": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Framer Motion"]
+        "items": ["Next.js", "React", "Angular", "Tailwind CSS", "Framer Motion"]
       },
       {
         "name": "Backend",
-        "items": ["Node.js", "REST APIs", "PostgreSQL", "MongoDB", "Spring Boot"]
+        "items": ["Node.js", "REST APIs", "PostgreSQL", "Redis", "Spring Boot"]
       },
       {
         "name": "Tools",
-        "items": ["Git", "Docker", "Vercel", "Figma", "VS Code"]
+        "items": [
+          "Git",
+          "Docker",
+          "Vercel",
+          "Cloudflare",
+          "Claude",
+          "Linux",
+          "Figma",
+          "VS Code"
+        ]
       }
     ]
   },
@@ -65,15 +78,15 @@
     "items": [
       {
         "name": "Birthdayy",
-        "desc": "A Discord bot and web app that tracks birthdays for servers — used by thousands of communities. Built the full product from bot to landing page.",
+        "desc": "A Discord bot and web app for tracking birthdays across servers, used by thousands of communities. Built the full product from bot to landing page.",
         "tags": ["TypeScript", "Next.js", "Discord API"],
-        "url": "https://birthdayy.app"
+        "url": "https://birthdayy.xyz"
       },
       {
         "name": "VBC Rämi Website",
         "desc": "Designed and built the website for my volleyball club VBC Rämi. Clean, fast, and actually maintained.",
         "tags": ["Next.js", "TypeScript", "Tailwind"],
-        "url": "https://vbc-raemi.ch"
+        "url": "https://vbcraemi.ch"
       },
       {
         "name": "Volleyball Scoreboard",
@@ -103,7 +116,7 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Let's build something.",
-    "desc": "Whether it's a project, a question, or just a chat — I'm reachable.",
+    "desc": "Whether it's a project, a question, or just a chat, I'm reachable.",
     "email": "Get in touch",
     "github": "GitHub",
     "linkedin": "LinkedIn"

@@ -17,7 +17,10 @@ export default function Projects() {
   }>;
 
   return (
-    <section id="projects" className="py-28 px-6 border-t border-[var(--border)]">
+    <section
+      id="projects"
+      className="py-28 px-6 border-t border-[var(--border)]"
+    >
       <div className="max-w-3xl mx-auto" ref={ref}>
         <motion.p
           initial={{ opacity: 0, x: -16 }}
@@ -57,7 +60,9 @@ export default function Projects() {
                   </h3>
                   <span className="text-[var(--muted)] text-xs">↗</span>
                 </div>
-                <p className="text-sm text-[var(--muted)] leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-[var(--muted)] leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
               <div className="flex flex-wrap gap-1.5 md:justify-end md:max-w-[200px]">
                 {item.tags.map((tag) => (

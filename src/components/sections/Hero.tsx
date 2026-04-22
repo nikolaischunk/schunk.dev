@@ -8,7 +8,11 @@ const fadeUp = {
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+    transition: {
+      delay: i * 0.12,
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+    },
   }),
 };
 
@@ -32,7 +36,8 @@ export default function Hero() {
       <div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse, rgba(120,194,173,0.12) 0%, transparent 70%)",
+          background:
+            "radial-gradient(ellipse, rgba(120,194,173,0.12) 0%, transparent 70%)",
         }}
       />
 

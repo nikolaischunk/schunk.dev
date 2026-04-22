@@ -17,7 +17,10 @@ export default function Experience() {
   }>;
 
   return (
-    <section id="experience" className="py-28 px-6 border-t border-[var(--border)]">
+    <section
+      id="experience"
+      className="py-28 px-6 border-t border-[var(--border)]"
+    >
       <div className="max-w-3xl mx-auto" ref={ref}>
         <motion.p
           initial={{ opacity: 0, x: -16 }}
@@ -43,10 +46,16 @@ export default function Experience() {
                 style={{ background: "var(--background)" }}
               />
 
-              <p className="font-mono text-xs text-[var(--muted)] mb-1">{item.period}</p>
+              <p className="font-mono text-xs text-[var(--muted)] mb-1">
+                {item.period}
+              </p>
               <h3 className="font-semibold text-lg mb-0.5">{item.role}</h3>
-              <p className="text-sm text-[var(--accent)] mb-3 font-mono">{item.company}</p>
-              <p className="text-sm text-[var(--muted)] leading-relaxed">{item.desc}</p>
+              <p className="text-sm text-[var(--accent)] mb-3 font-mono">
+                {item.company}
+              </p>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                {item.desc}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -4,13 +4,22 @@ import { useTranslations } from "next-intl";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+// Email assembled at runtime — never a plain string in the HTML source
+const getMailto = () => {
+  const parts = ["nikolai", "schunk", "dev"];
+  return `mailto:${parts[0]}@${parts[1]}.${parts[2]}`;
+};
+
 export default function Contact() {
   const t = useTranslations("contact");
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contact" className="py-28 px-6 border-t border-[var(--border)]">
+    <section
+      id="contact"
+      className="py-28 px-6 border-t border-[var(--border)]"
+    >
       <div className="max-w-3xl mx-auto text-center" ref={ref}>
         <motion.p
           initial={{ opacity: 0, x: -16 }}
@@ -46,7 +55,11 @@ export default function Contact() {
           className="flex items-center justify-center gap-4 flex-wrap"
         >
           <a
-            href="mailto:nikolai@schunk.dev"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = getMailto();
+            }}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-80"
             style={{ background: "var(--accent)", color: "#fff" }}
           >
@@ -54,7 +67,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://github.com/schunkdev"
+            href="https://github.com/nikolaischunk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
@@ -80,7 +93,7 @@ export default function Contact() {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="text-center text-xs font-mono text-[var(--muted)] mt-20"
       >
-        © {new Date().getFullYear()} Nikolai Schunk — built with Next.js
+        © {new Date().getFullYear()} Nikolai Schunk
       </motion.p>
     </section>
   );

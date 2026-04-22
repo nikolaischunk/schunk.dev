@@ -9,7 +9,10 @@ export default function Stack() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const categories = t.raw("categories") as Array<{ name: string; items: string[] }>;
+  const categories = t.raw("categories") as Array<{
+    name: string;
+    items: string[];
+  }>;
 
   return (
     <section id="stack" className="py-28 px-6 border-t border-[var(--border)]">

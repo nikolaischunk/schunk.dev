@@ -9,7 +9,11 @@ export default function Human() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const items = t.raw("items") as Array<{ icon: string; title: string; desc: string }>;
+  const items = t.raw("items") as Array<{
+    icon: string;
+    title: string;
+    desc: string;
+  }>;
 
   return (
     <section id="human" className="py-28 px-6 border-t border-[var(--border)]">
@@ -45,7 +49,9 @@ export default function Human() {
               <h3 className="font-semibold text-sm mb-2 group-hover:text-[var(--accent)] transition-colors">
                 {item.title}
               </h3>
-              <p className="text-xs text-[var(--muted)] leading-relaxed">{item.desc}</p>
+              <p className="text-xs text-[var(--muted)] leading-relaxed">
+                {item.desc}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -6,7 +6,14 @@ import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import LangToggle from "./LangToggle";
 
-const sections = ["about", "human", "stack", "projects", "experience", "contact"] as const;
+const sections = [
+  "about",
+  "human",
+  "stack",
+  "projects",
+  "experience",
+  "contact",
+] as const;
 
 export default function Nav({ locale }: { locale: string }) {
   const t = useTranslations("nav");
@@ -26,7 +33,7 @@ export default function Nav({ locale }: { locale: string }) {
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md"
     >
       <span className="font-mono text-sm font-semibold text-[var(--accent)]">
-        ns<span className="text-[var(--muted)]">.dev</span>
+        schunk<span className="text-[var(--muted)]">.dev</span>
       </span>
 
       <div className="hidden md:flex items-center gap-6">

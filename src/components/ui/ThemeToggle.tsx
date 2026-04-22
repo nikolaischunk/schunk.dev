@@ -9,14 +9,21 @@ export default function ThemeToggle() {
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     const isDark = stored ? stored === "dark" : true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDark(isDark);
-    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "dark" : "light",
+    );
   }, []);
 
   const toggle = () => {
     const next = !dark;
     setDark(next);
-    document.documentElement.setAttribute("data-theme", next ? "dark" : "light");
+    document.documentElement.setAttribute(
+      "data-theme",
+      next ? "dark" : "light",
+    );
     localStorage.setItem("theme", next ? "dark" : "light");
   };
 
