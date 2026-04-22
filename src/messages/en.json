@@ -51,7 +51,13 @@
       },
       {
         "name": "Frontend",
-        "items": ["Next.js", "React", "Angular", "Tailwind CSS", "Framer Motion"]
+        "items": [
+          "Next.js",
+          "React",
+          "Angular",
+          "Tailwind CSS",
+          "Framer Motion"
+        ]
       },
       {
         "name": "Backend",
@@ -84,15 +90,21 @@
       },
       {
         "name": "VBC Rämi Website",
-        "desc": "Designed and built the website for my volleyball club VBC Rämi. Clean, fast, and actually maintained.",
+        "desc": "Designed and built the website for my volleyball club VBC Rämi. I also integrated Sanity CMS so the club can update the content without needing a developer.",
         "tags": ["Next.js", "TypeScript", "Tailwind"],
         "url": "https://vbcraemi.ch"
       },
       {
         "name": "Volleyball Scoreboard",
-        "desc": "A real-time scoreboard web app for tracking volleyball game scores. Built with TypeScript for match-day use.",
+        "desc": "A match-day scoreboard you can run from your phone: tap/swipe to update points, track sets and timeouts, and share a short live link so spectators can follow along in real time.",
         "tags": ["TypeScript", "React"],
         "url": "https://github.com/schunkdev/volleyball-scoreboard"
+      },
+      {
+        "name": "icon apps",
+        "desc": "Data cleanup and visualisation tools for different data analysis use cases for the icon outdoor company, saving hours of work every week and increasing workflow efficiency by 160%.",
+        "tags": ["Data tooling", "Automation", "Visualisation"],
+        "url": "https://icon.schunk.dev"
       }
     ]
   },
@@ -110,6 +122,12 @@
         "company": "Self-employed",
         "period": "2022 — Present",
         "desc": "Building products, websites, and tools for clients and personal projects. From Discord bots to club websites."
+      },
+      {
+        "role": "Application Developer (Apprenticeship)",
+        "company": "Accenture",
+        "period": "2019 — 2023",
+        "desc": "Completed my apprenticeship while building full-stack features and learning solid software engineering fundamentals. Worked in agile teams on client projects, which gave me exposure to different industries and ways of working."
       }
     ]
   },

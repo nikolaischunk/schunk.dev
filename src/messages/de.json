@@ -51,7 +51,13 @@
       },
       {
         "name": "Frontend",
-        "items": ["Next.js", "React", "Angular", "Tailwind CSS", "Framer Motion"]
+        "items": [
+          "Next.js",
+          "React",
+          "Angular",
+          "Tailwind CSS",
+          "Framer Motion"
+        ]
       },
       {
         "name": "Backend",
@@ -84,15 +90,21 @@
       },
       {
         "name": "VBC Rämi Website",
-        "desc": "Design und Entwicklung der Website für meinen Volleyballverein VBC Rämi. Sauber, schnell und tatsächlich gepflegt.",
+        "desc": "Design und Entwicklung der Website für meinen Volleyballverein VBC Rämi. Zusätzlich habe ich Sanity CMS integriert, damit der Verein Inhalte selbst pflegen kann, ohne dafür einen Entwickler zu brauchen.",
         "tags": ["Next.js", "TypeScript", "Tailwind"],
         "url": "https://vbc-raemi.ch"
       },
       {
         "name": "Volleyball Scoreboard",
-        "desc": "Eine Echtzeit-Anzeigetafel für Volleyballspiele. Mit TypeScript gebaut für den Matchday-Einsatz.",
+        "desc": "Eine Matchday-Anzeigetafel fürs Volleyballspiele: Punkte per Tap/Swipe updaten, Sätze und Timeouts tracken und einen kurzen Live-Link teilen, damit Zuschauer in Echtzeit mitsehen können.",
         "tags": ["TypeScript", "React"],
         "url": "https://github.com/schunkdev/volleyball-scoreboard"
+      },
+      {
+        "name": "icon apps",
+        "desc": "Tools für Datenbereinigung und Visualisierung für verschiedene Datenanalyse-Use-Cases für Icon Outdoor. Spart jede Woche mehrere Stunden Arbeit und steigert die Workflow-Effizienz um 160%.",
+        "tags": ["Data tooling", "Automation", "Visualisierung"],
+        "url": "https://icon.schunk.dev"
       }
     ]
   },
@@ -110,6 +122,12 @@
         "company": "Selbstständig",
         "period": "2022 — Heute",
         "desc": "Produkte, Websites und Tools für Kunden und eigene Projekte. Von Discord-Bots bis zu Vereinswebsites."
+      },
+      {
+        "role": "Applikationsentwickler (Lehrling)",
+        "company": "Accenture",
+        "period": "2019 — 2023",
+        "desc": "Lehre mit Fokus auf Programmieren und Software-Grundlagen. Full-Stack-Entwicklung in agilen Teams und Projektarbeit auf Kundenmandaten, mit Einblicken in verschiedene Branchen und Unternehmen."
       }
     ]
   },
