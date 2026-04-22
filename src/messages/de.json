@@ -10,7 +10,7 @@
   "hero": {
     "greeting": "Hey, ich bin",
     "name": "Nikolai Schunk",
-    "tagline": "Codeenthusiast. Gut mit Menschen. Bringt Dinge zum Laufen.",
+    "tagline": "Code-enthusiast. Gut mit Menschen. Baut Dinge, die funktionieren.",
     "location": "Zürich, Schweiz",
     "cta": "Meine Arbeit",
     "available": "Offen für Möglichkeiten"
@@ -101,7 +101,7 @@
         "url": "https://github.com/schunkdev/volleyball-scoreboard"
       },
       {
-        "name": "icon apps",
+        "name": "ICON apps",
         "desc": "Tools für Datenbereinigung und Visualisierung für verschiedene Datenanalyse-Use-Cases für Icon Outdoor. Spart jede Woche mehrere Stunden Arbeit und steigert die Workflow-Effizienz um 160%.",
         "tags": ["Data tooling", "Automation", "Visualisierung"],
         "url": "https://icon.schunk.dev"
@@ -133,7 +133,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "subtitle": "Lass uns etwas bauen.",
+    "subtitle": "Sag Hallo!",
     "desc": "Ob Projekt, Frage oder einfach ein Gespräch, ich bin erreichbar.",
     "email": "Schreib mir",
     "github": "GitHub",

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useId, useMemo, type CSSProperties } from "react";
+import { useEffect, useId, useMemo, useState, type CSSProperties } from "react";
 
 type BackgroundPatternVariant =
   | "grid"
@@ -72,16 +72,6 @@ function u32ToUnitFloat(u32: number): number {
   return (u32 >>> 0) / 2 ** 32;
 }
 
-const CLIENT_LOAD_SEED: number =
-  typeof window === "undefined"
-    ? 0
-    : (() => {
-        const buf = new Uint32Array(1);
-        // crypto is available in modern browsers; fallback is deterministic.
-        globalThis.crypto?.getRandomValues?.(buf);
-        return buf[0] ?? 0;
-      })();
-
 export default function BackgroundPattern({
   variant = "grid",
   animated = true,
@@ -96,19 +86,27 @@ export default function BackgroundPattern({
   style?: CSSProperties;
 }) {
   const id = useId();
+  const [clientSeed, setClientSeed] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Important: do not call Math.random() during SSR/hydration render.
+    // We "upgrade" to a client-only seed after mount to avoid hydration mismatch.
+    setClientSeed(Math.random());
+  }, []);
 
   const resolvedVariant = useMemo<BackgroundPatternVariant>(() => {
     if (variant !== "random") return variant;
     const variants = Object.keys(variantStyles) as BackgroundPatternVariant[];
-    const seed = hashStringToU32(`${CLIENT_LOAD_SEED}:${id}`);
+    // Deterministic for SSR/hydration, then feels-random after mount.
+    const seed = hashStringToU32(`${id}:${clientSeed ?? 0}`);
     const idx = seed % variants.length;
     return variants[idx] ?? "grid";
-  }, [id, variant]);
+  }, [clientSeed, id, variant]);
 
   const pulse = useMemo<PulseConfig>(() => {
     if (!animated) return { keyframes: [1, 1, 1, 1], duration: 8, delay: 0 };
 
-    const seed = hashStringToU32(`${CLIENT_LOAD_SEED}:${id}:${resolvedVariant}`);
+    const seed = hashStringToU32(`${id}:${resolvedVariant}:${clientSeed ?? 0}`);
     const r1 = u32ToUnitFloat(seed);
     const r2 = u32ToUnitFloat(seed ^ 0xa53c9e17);
     const r3 = u32ToUnitFloat(seed ^ 0x7f4a7c15);
@@ -126,7 +124,7 @@ export default function BackgroundPattern({
     const delay = lerp(0.0, 2.5, r5);
 
     return { keyframes: [a, b, c, a], duration, delay };
-  }, [animated, id, resolvedVariant]);
+  }, [animated, clientSeed, id, resolvedVariant]);
 
   const motionStyle = useMemo(() => {
     const fadeMask =
