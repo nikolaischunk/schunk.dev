@@ -1,4 +1,5 @@
 import Nav from "@/components/ui/Nav";
+import MouseGlow from "@/components/ui/MouseGlow";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Human from "@/components/sections/Human";
@@ -16,6 +17,7 @@ export default async function Page({
 
   return (
     <main>
+      <MouseGlow />
       <Nav locale={locale} />
       <Hero />
       <About />
