@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "about": "About",
+    "human": "Human",
+    "stack": "Stack",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hey, I'm",
+    "name": "Nikolai Schunk",
+    "tagline": "Enthusiastic about code. Good with people. Ships things.",
+    "location": "Zurich, Switzerland",
+    "cta": "See my work",
+    "available": "Open to opportunities"
+  },
+  "about": {
+    "title": "About",
+    "p1": "I'm a frontend-focused software engineer based in Zurich, working at an international tech consulting firm. My stack revolves around TypeScript and Next.js — but I'm comfortable across the full stack when needed.",
+    "p2": "I care about building things that actually get used. Not just clean code for its own sake, but products that people interact with and find valuable. I bring both technical depth and the communication skills to work effectively with teams and stakeholders."
+  },
+  "human": {
+    "title": "Human",
+    "subtitle": "Beyond the keyboard",
+    "items": [
+      {
+        "icon": "🏋️",
+        "title": "Training Lead at ASVZ",
+        "desc": "Running fitness training sessions at the University Sports association of Zurich."
+      },
+      {
+        "icon": "🏐",
+        "title": "Volleyball Coach",
+        "desc": "Coaching volleyball at my local club — leading teams, building strategy, developing players."
+      },
+      {
+        "icon": "⛷️",
+        "title": "Ski Instructor",
+        "desc": "Teaching skiing on the slopes — patience, clear communication, and reading people."
+      }
+    ]
+  },
+  "stack": {
+    "title": "Stack",
+    "subtitle": "The tools I reach for",
+    "categories": [
+      {
+        "name": "Frontend",
+        "items": ["TypeScript", "Next.js", "React", "Tailwind CSS", "Framer Motion"]
+      },
+      {
+        "name": "Backend",
+        "items": ["Node.js", "REST APIs", "PostgreSQL", "MongoDB", "Spring Boot"]
+      },
+      {
+        "name": "Tools",
+        "items": ["Git", "Docker", "Vercel", "Figma", "VS Code"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Things I've shipped",
+    "items": [
+      {
+        "name": "Birthdayy",
+        "desc": "A Discord bot and web app that tracks birthdays for servers — used by thousands of communities. Built the full product from bot to landing page.",
+        "tags": ["TypeScript", "Next.js", "Discord API"],
+        "url": "https://birthdayy.app"
+      },
+      {
+        "name": "VBC Rämi Website",
+        "desc": "Designed and built the website for my volleyball club VBC Rämi. Clean, fast, and actually maintained.",
+        "tags": ["Next.js", "TypeScript", "Tailwind"],
+        "url": "https://vbc-raemi.ch"
+      },
+      {
+        "name": "Volleyball Scoreboard",
+        "desc": "A real-time scoreboard web app for tracking volleyball game scores. Built with TypeScript for match-day use.",
+        "tags": ["TypeScript", "React"],
+        "url": "https://github.com/schunkdev/volleyball-scoreboard"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "role": "Software Engineer",
+        "company": "International Tech Consulting",
+        "period": "2024 — Present",
+        "desc": "Working with international clients on modern web solutions. Translating complex requirements into clean, scalable frontend implementations."
+      },
+      {
+        "role": "Freelance Developer",
+        "company": "Self-employed",
+        "period": "2022 — Present",
+        "desc": "Building products, websites, and tools for clients and personal projects. From Discord bots to club websites."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's build something.",
+    "desc": "Whether it's a project, a question, or just a chat — I'm reachable.",
+    "email": "Get in touch",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
