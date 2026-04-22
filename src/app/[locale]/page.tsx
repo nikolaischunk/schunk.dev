@@ -16,16 +16,18 @@ export default async function Page({
   const { locale } = await params;
 
   return (
-    <main>
+    <main className="relative">
       <MouseGlow />
-      <Nav locale={locale} />
-      <Hero />
-      <About />
-      <Human />
-      <Stack />
-      <Projects />
-      <Experience />
-      <Contact />
+      <div className="relative z-10">
+        <Nav locale={locale} />
+        <Hero />
+        <About />
+        <Human />
+        <Stack />
+        <Projects />
+        <Experience />
+        <Contact />
+      </div>
     </main>
   );
 }
