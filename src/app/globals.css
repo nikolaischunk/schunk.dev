@@ -9,8 +9,9 @@
   --muted: #6b7280;
   --card: #ffffff;
   --border: #e5e7eb;
-  --grid-line: rgb(var(--accent-rgb) / 0.14);
-  --grid-opacity: 0.55;
+  --grid-line: rgb(var(--accent-rgb) / 0.22);
+  --pattern-opacity: 0.8;
+  --pattern-pulse: 1;
 }
 
 [data-theme="dark"] {
@@ -19,8 +20,8 @@
   --muted: #9ca3af;
   --card: #161616;
   --border: #262626;
-  --grid-line: rgb(var(--accent-rgb) / 0.09);
-  --grid-opacity: 0.25;
+  --grid-line: rgb(var(--accent-rgb) / 0.16);
+  --pattern-opacity: 0.55;
 }
 
 @theme inline {

@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import BackgroundPattern from "@/components/ui/BackgroundPattern";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -21,16 +22,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-      {/* Subtle grid background */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-          opacity: "var(--grid-opacity)",
-        }}
-      />
+      <BackgroundPattern variant="random" />
 
       <div className="relative z-10 max-w-3xl w-full">
         <motion.p
