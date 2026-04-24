@@ -1,100 +1,93 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-
-// Email assembled at runtime — never a plain string in the HTML source
-const getMailto = () => {
-  const parts = ["nikolai", "schunk", "dev"];
-  return `mailto:${parts[0]}@${parts[1]}.${parts[2]}`;
-};
+import me from "@/data/me.json";
 
 export default function Contact() {
-  const t = useTranslations("contact");
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section
+    <footer
       id="contact"
-      className="py-28 px-6 border-t border-[var(--border)]"
+      className="relative pt-48 pb-32 px-6 md:px-12 border-t border-[#1a1a1a]"
     >
-      <div className="max-w-3xl mx-auto text-center" ref={ref}>
-        <motion.p
-          initial={{ opacity: 0, x: -16 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="font-mono text-xs text-[var(--accent)] mb-4 uppercase tracking-widest"
-        >
-          06 — {t("title")}
-        </motion.p>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16 text-white">
+        <div className="flex-1">
+          <h2 className="text-[14vw] md:text-[10vw] leading-[0.85] font-black tracking-tighter text-white mb-12 select-none">
+            LET&apos;S
+            <br />
+            TALK.
+          </h2>
+          <div className="flex flex-col gap-6">
+            <a
+              href={`mailto:${me.contact.email}`}
+              className="text-3xl md:text-4xl font-semibold hover:text-[#78c2ad] transition-all w-fit"
+            >
+              {me.contact.email}
+            </a>
+            <p className="text-[#666666] flex items-center gap-2">
+              <span className="text-[#888888]">
+                <iconify-icon icon="lucide:map-pin" className="text-lg" />
+              </span>
+              {me.personal.location.label}. Available worldwide.
+            </p>
+          </div>
+        </div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-5xl font-bold mb-4"
-        >
-          {t("subtitle")}
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[var(--muted)] mb-10"
-        >
-          {t("desc")}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-center justify-center gap-4 flex-wrap"
-        >
+        <div className="flex gap-4 md:mb-6">
           <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = getMailto();
-            }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ background: "var(--accent)", color: "#fff" }}
-          >
-            {t("email")} →
-          </a>
-
-          <a
-            href="https://github.com/nikolaischunk"
+            href={me.contact.socials.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
+            className="w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2"
+            aria-label="Instagram"
           >
-            {t("github")}
+            <iconify-icon icon="lucide:instagram" className="text-xl" />
           </a>
-
           <a
-            href="https://linkedin.com/in/nikolaischunk"
+            href={me.contact.socials.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
+            className="w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2"
+            aria-label="Twitter"
           >
-            {t("linkedin")}
+            <iconify-icon icon="lucide:twitter" className="text-xl" />
           </a>
-        </motion.div>
+          <a
+            href={me.contact.socials.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2"
+            aria-label="LinkedIn"
+          >
+            <iconify-icon icon="lucide:linkedin" className="text-xl" />
+          </a>
+          <a
+            href={me.contact.socials.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-14 h-14 border border-[#333333] rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all hover:-translate-y-2"
+            aria-label="GitHub"
+          >
+            <iconify-icon icon="lucide:github" className="text-xl" />
+          </a>
+        </div>
       </div>
 
-      {/* Footer */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center text-xs font-mono text-[var(--muted)] mt-20"
-      >
-        © {new Date().getFullYear()} Nikolai Schunk
-      </motion.p>
-    </section>
+      <div className="max-w-7xl mx-auto mt-40 pt-10 border-t border-[#111111] flex flex-col md:flex-row justify-between text-[#333333] text-[10px] font-bold uppercase tracking-widest">
+        <p>
+          © {new Date().getFullYear()} Nikolai Schunk. All rights reserved.
+        </p>
+        <div className="flex gap-10 mt-6 md:mt-0">
+          <a
+            href={`mailto:${me.contact.secondary_email}`}
+            className="hover:text-[#666666] transition-colors"
+          >
+            Alternative Contact
+          </a>
+          <a
+            href={me.contact.website}
+            className="hover:text-[#666666] transition-colors"
+          >
+            Main Site
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 }

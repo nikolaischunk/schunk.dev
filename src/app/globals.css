@@ -4,24 +4,14 @@
   --accent: #78c2ad;
   --accent-rgb: 120 194 173;
   --accent-dim: #5aab95;
-  --background: #f9f9f7;
-  --foreground: #111111;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --border: #e5e7eb;
-  --grid-line: rgb(var(--accent-rgb) / 0.22);
-  --pattern-opacity: 0.8;
-  --pattern-pulse: 1;
-}
-
-[data-theme="dark"] {
-  --background: #0e0e0e;
-  --foreground: #e8e8e6;
-  --muted: #9ca3af;
-  --card: #161616;
-  --border: #262626;
+  --background: #050505;
+  --foreground: #ffffff;
+  --muted: #888888;
+  --card: #111111;
+  --border: #222222;
   --grid-line: rgb(var(--accent-rgb) / 0.16);
   --pattern-opacity: 0.55;
+  --pattern-pulse: 1;
 }
 
 @theme inline {
@@ -37,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -48,7 +39,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: #000;
 }
 
 ::-webkit-scrollbar {

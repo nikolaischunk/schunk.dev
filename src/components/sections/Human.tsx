@@ -1,59 +1,40 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import me from "@/data/me.json";
 
 export default function Human() {
-  const t = useTranslations("human");
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
-  const items = t.raw("items") as Array<{
-    icon: string;
-    title: string;
-    desc: string;
-  }>;
-
   return (
-    <section id="human" className="py-28 px-6 border-t border-[var(--border)]">
-      <div className="max-w-3xl mx-auto" ref={ref}>
-        <motion.p
-          initial={{ opacity: 0, x: -16 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="font-mono text-xs text-[var(--accent)] mb-2 uppercase tracking-widest"
-        >
-          02 — {t("title")}
-        </motion.p>
+    <section id="human" className="py-32 px-6 md:px-12 max-w-7xl mx-auto">
+      <div className="bg-[#111111] rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#78c2ad]/5 blur-[100px] rounded-full" />
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl font-bold mb-12"
-        >
-          {t("subtitle")}
-        </motion.p>
+        <div className="relative z-10 flex flex-col lg:flex-row gap-20 items-center">
+          <div className="flex-1 text-center lg:text-left">
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8">
+              Beyond the screen.
+            </h2>
+            <p className="text-[#888888] max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              When I&apos;m not writing code, I&apos;m usually on the volleyball
+              court or the slopes. Teaching and coaching has shaped how I
+              communicate and lead in tech.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {items.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
-              className="p-6 rounded-2xl border border-[var(--border)] bg-[var(--card)] hover:border-[var(--accent)] transition-colors group"
-            >
-              <span className="text-3xl mb-4 block">{item.icon}</span>
-              <h3 className="font-semibold text-sm mb-2 group-hover:text-[var(--accent)] transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-xs text-[var(--muted)] leading-relaxed">
-                {item.desc}
-              </p>
-            </motion.div>
-          ))}
+          <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {me.human.activities.map((activity, i) => (
+              <div
+                key={i}
+                className="p-8 bg-[#0a0a0a] border border-[#222222] rounded-3xl hover:border-[#78c2ad]/30 transition-all"
+              >
+                <div className="text-3xl mb-4">{activity.icon}</div>
+                <h4 className="text-white font-bold mb-1">{activity.title}</h4>
+                <p className="text-[#666666] text-[10px] font-bold uppercase tracking-widest mb-4">
+                  {activity.organization || "Personal"}
+                </p>
+                <p className="text-[#888888] text-xs leading-relaxed">
+                  {activity.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

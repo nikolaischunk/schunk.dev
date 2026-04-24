@@ -1,0 +1,142 @@
+{
+  "personal": {
+    "name": "Nikolai Schunk",
+    "location": {
+      "city": "Zurich",
+      "country": "Switzerland",
+      "label": "Zurich, Switzerland"
+    },
+    "tagline": "Enthusiastic about code. Good with people. Ships things.",
+    "motto": "Shipping structured code that solves real-world problems.",
+    "bio": [
+      "I'm a frontend-focused software engineer based in Zurich, working at an international tech consulting firm. My stack revolves around TypeScript and Next.js, though I'm comfortable across the full stack when needed.",
+      "I write code that's meant to be understood: simple, clear, and to the point. Knowing the right modern tools is what makes the difference between a slow process and a sharp, solution-oriented workflow. For me, keeping things simple isn't a limitation, it's a principle."
+    ],
+    "philosophy": "A product only has value if it's used. I build with a 'Keep It Simple, Stupid' mindset—ensuring code is readable for developers and interfaces are accessible for everyone. If it doesn't improve a user's day, it's over-engineered.",
+    "availability": "Open to opportunities"
+  },
+  "contact": {
+    "email": "nikolai@schunk.dev",
+    "secondary_email": "hello@schunk.dev",
+    "website": "https://schunk.dev",
+    "socials": {
+      "github": "https://github.com/nikolaischunk",
+      "linkedin": "https://linkedin.com/in/nikolaischunk",
+      "twitter": "https://twitter.com/nikolaischunk",
+      "instagram": "https://instagram.com/nikolaischunk"
+    }
+  },
+  "professional": {
+    "role": "Software Engineer",
+    "focus": [
+      "Human-Centric Engineering",
+      "KISS",
+      "Process Automation",
+      "Workflow Optimization"
+    ],
+    "experience": [
+      {
+        "role": "Software Engineer",
+        "company": "International Tech Consulting",
+        "period": "2024 — Present",
+        "description": "Working with international clients on modern web solutions. Translating complex requirements into clean, scalable frontend implementations."
+      },
+      {
+        "role": "Freelance Developer",
+        "company": "Self-employed",
+        "period": "2022 — Present",
+        "description": "Building products, websites, and tools for clients and personal projects. From Discord bots to club websites."
+      },
+      {
+        "role": "Application Developer (Apprenticeship)",
+        "company": "Accenture",
+        "period": "2019 — 2023",
+        "description": "Completed my apprenticeship while building full-stack features and learning solid software engineering fundamentals. Worked in agile teams on client projects, which gave me exposure to different industries and ways of working."
+      }
+    ],
+    "projects": [
+      {
+        "id": "birthdayy",
+        "name": "Birthdayy",
+        "type": "Product",
+        "description": "A Discord bot and web app for tracking birthdays across servers, used by thousands of communities. Built the full product from bot to landing page.",
+        "image": "/images/projects/birthdayy-banner.png",
+        "tech": ["TypeScript", "Next.js", "Discord API"],
+        "url": "https://birthdayy.xyz"
+      },
+      {
+        "id": "vbc-raemi",
+        "name": "VBC Rämi Website",
+        "type": "Website / CMS",
+        "description": "Designed and built the website for my volleyball club VBC Rämi. I also integrated Sanity CMS so the club can update the content without needing a developer.",
+        "image": "/images/projects/vbc-raemi.png",
+        "tech": ["Next.js", "TypeScript", "Tailwind", "Sanity"],
+        "url": "https://vbcraemi.ch"
+      },
+      {
+        "id": "volleyball-scoreboard",
+        "name": "Volleyball Scoreboard",
+        "type": "Web App",
+        "description": "A match-day scoreboard you can run from your phone: tap/swipe to update points, track sets and timeouts, and share a short live link so spectators can follow along in real time.",
+        "image": "/images/projects/volleyball-scoreboard.png",
+        "tech": ["TypeScript", "React"],
+        "url": "https://github.com/schunkdev/volleyball-scoreboard"
+      },
+      {
+        "id": "icon-apps",
+        "name": "ICON apps",
+        "type": "Internal Tooling",
+        "description": "Data cleanup and visualisation tools for different data analysis use cases for the icon outdoor company, saving hours of work every week and increasing workflow efficiency by 160%.",
+        "image": null,
+        "tech": ["Data tooling", "Automation", "Visualisation"],
+        "url": "https://icon.schunk.dev"
+      }
+    ],
+    "skills": {
+      "languages": ["TypeScript", "Java", "Python", "PHP"],
+      "frontend": [
+        "Next.js",
+        "React",
+        "Angular",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "backend": ["Node.js", "REST APIs", "PostgreSQL", "Redis", "Spring Boot"],
+      "tools": [
+        "Git",
+        "Docker",
+        "Vercel",
+        "Cloudflare",
+        "Claude",
+        "Linux",
+        "Figma",
+        "VS Code"
+      ]
+    }
+  },
+  "human": {
+    "activities": [
+      {
+        "icon": "👤",
+        "title": "Volleyball Training Lead",
+        "organization": "ASVZ",
+        "description": "Leading volleyball training sessions at the University Sports Association of Zurich."
+      },
+      {
+        "icon": "🏐",
+        "title": "Volleyball Coach",
+        "organization": "VBC Rämi",
+        "description": "Coaching at my local club, leading teams, building strategy, and developing players."
+      },
+      {
+        "icon": "⛷️",
+        "title": "Ski Instructor",
+        "description": "Teaching skiing means patience, clear communication, and reading people."
+      }
+    ]
+  },
+  "metadata": {
+    "last_updated": "2026-04-24T14:00:00Z",
+    "version": "1.0.0"
+  }
+}
