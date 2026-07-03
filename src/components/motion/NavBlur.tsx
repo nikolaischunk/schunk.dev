@@ -6,7 +6,7 @@ export default function NavBlur({ children }: { children: React.ReactNode }) {
   const reduce = useReducedMotion();
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(scrollY, [0, 100], [0, 0.9]);
-  const borderOpacity = useTransform(scrollY, [0, 100], [0, 1]);
+  const backdropBlur = useTransform(scrollY, [0, 100], ["blur(0px)", "blur(12px)"]);
 
   if (reduce) {
     return (
@@ -22,13 +22,13 @@ export default function NavBlur({ children }: { children: React.ReactNode }) {
     <motion.nav
       className="fixed top-0 left-0 right-0 z-[100]"
       style={{
-        backdropFilter: useTransform(scrollY, [0, 100], ["blur(0px)", "blur(12px)"]),
-        WebkitBackdropFilter: useTransform(scrollY, [0, 100], ["blur(0px)", "blur(12px)"]),
+        backdropFilter: backdropBlur,
+        WebkitBackdropFilter: backdropBlur,
       }}
     >
       <motion.div
         className="absolute inset-0 bg-background border-b border-border"
-        style={{ opacity: bgOpacity, borderBottomColor: useTransform(borderOpacity, v => `rgba(224, 220, 214, ${v})`) }}
+        style={{ opacity: bgOpacity }}
       />
       <div className="relative max-w-7xl mx-auto px-5 md:px-12 h-16 flex items-center justify-between">
         {children}
