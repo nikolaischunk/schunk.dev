@@ -1,54 +1,82 @@
 @import "tailwindcss";
 
+/* — Clash Display — */
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* — Cabinet Grotesk — */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/fonts/CabinetGrotesk-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --accent: #78c2ad;
-  --accent-rgb: 120 194 173;
-  --accent-dim: #5aab95;
-  --background: #050505;
-  --foreground: #ffffff;
-  --muted: #888888;
-  --card: #111111;
-  --border: #222222;
-  --grid-line: rgb(var(--accent-rgb) / 0.16);
-  --pattern-opacity: 0.55;
-  --pattern-pulse: 1;
+  --background: #F5F2ED;
+  --foreground: #1A1816;
+  --accent: #2A9D8F;
+  --accent-dim: #238578;
+  --muted: #8C8578;
+  --border: #E0DCD6;
+  --card: #EDEAE4;
+  --surface-tint: #EEF7F5;
+  --font-display: "Clash Display", system-ui, sans-serif;
+  --font-body: "Cabinet Grotesk", system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
   --color-muted: var(--muted);
   --color-card: var(--card);
   --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
+  --color-surface-tint: var(--surface-tint);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
   --font-mono: var(--font-geist-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), "Inter", system-ui, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-family: var(--font-body);
 }
 
 ::selection {
   background: var(--accent);
-  color: #000;
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 2px;
+  color: #fff;
 }
