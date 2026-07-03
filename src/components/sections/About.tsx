@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 md:py-32 px-5 md:px-12 max-w-7xl mx-auto">
       <RevealOnScroll>
-        <h2 className="font-[family-name:var(--font-display)] font-bold text-4xl md:text-6xl tracking-tighter text-foreground mb-8">
+        <h2 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-5xl tracking-tight text-foreground mb-8">
           {me.personal.motto}
         </h2>
       </RevealOnScroll>

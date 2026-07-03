@@ -11,7 +11,7 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function Human() {
   return (
     <section className="py-24 md:py-32 px-5 md:px-12">
-      <div className="max-w-7xl mx-auto bg-surface-tint rounded-2xl p-8 md:p-16">
+      <div className="max-w-7xl mx-auto bg-surface-tint rounded-xl p-8 md:p-16">
         <RevealOnScroll>
           <h2 className="font-[family-name:var(--font-display)] font-bold text-4xl md:text-6xl tracking-tighter text-foreground mb-4">
             Beyond the screen

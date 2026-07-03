@@ -109,7 +109,12 @@ export default function Projects() {
                 className="group block"
               >
                 <div className="aspect-[4/3] overflow-hidden rounded-xl bg-card relative">
-                  <ProjectImage project={project} />
+                  <Image
+                    src={project.image || `https://picsum.photos/seed/${project.id}/800/600`}
+                    alt={project.name}
+                    fill
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                  />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-foreground/10 backdrop-blur-[2px]">
                     <span className="px-5 py-2.5 bg-foreground text-background font-medium text-xs rounded-lg">
                       View project
