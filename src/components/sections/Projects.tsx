@@ -57,7 +57,7 @@ export default function Projects() {
                   <span className="text-xs font-mono text-muted uppercase tracking-wider">
                     {project.type}
                   </span>
-                  <h3 className="font-[family-name:var(--font-display)] font-bold text-3xl md:text-4xl tracking-tight text-foreground mt-2 mb-4">
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-2xl md:text-4xl tracking-tight text-foreground mt-2 mb-4">
                     {project.name}
                   </h3>
                   <p className="text-muted leading-relaxed text-sm max-w-md mb-6">
@@ -95,7 +95,7 @@ export default function Projects() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-20">
           {archive.map((project, idx) => (
             <RevealOnScroll
               key={project.id}

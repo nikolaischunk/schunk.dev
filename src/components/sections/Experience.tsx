@@ -13,7 +13,7 @@ export default function Experience() {
       <div className="space-y-0">
         {me.professional.experience.map((exp, i) => (
           <RevealOnScroll key={i} delay={i * 0.08}>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start py-8 border-b border-border">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-8 items-start py-6 md:py-8 border-b border-border">
               <div className="md:col-span-3">
                 <span className="font-mono text-sm text-muted">
                   {exp.period}

@@ -23,7 +23,7 @@ export default function About() {
       </RevealOnScroll>
 
       <RevealOnScroll delay={0.15}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {Object.entries(skills).map(([category, items]) => (
             <div key={category}>
               <h4 className="text-xs font-mono text-muted uppercase tracking-wider mb-4">

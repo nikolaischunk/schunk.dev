@@ -55,7 +55,7 @@ export default function Contact() {
           </div>
         </RevealOnScroll>
 
-        <div className="mt-24 pt-6 border-t border-border flex flex-col md:flex-row justify-between text-xs font-mono text-muted">
+        <div className="mt-16 md:mt-24 pt-6 border-t border-border flex flex-col md:flex-row justify-between text-xs font-mono text-muted">
           <p>
             {new Date().getFullYear()} Nikolai Schunk
           </p>
