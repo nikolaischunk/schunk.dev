@@ -52,3 +52,18 @@ body {
   background: var(--accent);
   border-radius: 2px;
 }
+
+@keyframes aurora-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(18%, 22%) scale(1.15); }
+}
+
+@keyframes aurora-2 {
+  0%   { transform: translate(0, 0) scale(1.05); }
+  100% { transform: translate(-22%, -16%) scale(0.9); }
+}
+
+@keyframes aurora-3 {
+  0%   { transform: translate(0, 0) scale(0.95); }
+  100% { transform: translate(14%, -24%) scale(1.12); }
+}
