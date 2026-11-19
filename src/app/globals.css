@@ -1,40 +1,44 @@
 @import "tailwindcss";
 
+/* The teal is the one colour every layout shares; each layout sets its own ground. */
 :root {
   --accent: #78c2ad;
-  --accent-rgb: 120 194 173;
   --accent-dim: #5aab95;
   --background: #050505;
   --foreground: #ffffff;
-  --muted: #888888;
-  --card: #111111;
-  --border: #222222;
-  --grid-line: rgb(var(--accent-rgb) / 0.16);
-  --pattern-opacity: 0.55;
-  --pattern-pulse: 1;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  --color-muted: var(--muted);
-  --color-card: var(--card);
-  --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent-dim: var(--accent-dim);
+  --font-sans: var(--font-atkinson);
+  --font-mono: var(--font-atkinson-mono);
+  --font-mona: var(--font-mona);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), "Inter", system-ui, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-family: var(--font-atkinson), system-ui, sans-serif;
+}
+
+/* Mona Sans widths: narrow enough to keep long names on a phone, wide on desktop. */
+.mona-stretch {
+  font-variation-settings: "wdth" 88;
+}
+
+.mona-wide {
+  font-variation-settings: "wdth" 112;
+}
+
+@media (min-width: 768px) {
+  .mona-stretch {
+    font-variation-settings: "wdth" 125;
+  }
 }
 
 ::selection {
@@ -42,28 +46,8 @@ body {
   color: #000;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-@keyframes aurora-1 {
-  0%   { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(18%, 22%) scale(1.15); }
-}
-
-@keyframes aurora-2 {
-  0%   { transform: translate(0, 0) scale(1.05); }
-  100% { transform: translate(-22%, -16%) scale(0.9); }
-}
-
-@keyframes aurora-3 {
-  0%   { transform: translate(0, 0) scale(0.95); }
-  100% { transform: translate(14%, -24%) scale(1.12); }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

@@ -1,9 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Atkinson_Hyperlegible_Mono, Atkinson_Hyperlegible_Next, Mona_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+// Panel: Atkinson Hyperlegible, drawn so no two letters can be mistaken for each other.
+const atkinson = Atkinson_Hyperlegible_Next({ subsets: ["latin"], variable: "--font-atkinson" });
+const atkinsonMono = Atkinson_Hyperlegible_Mono({ subsets: ["latin"], variable: "--font-atkinson-mono" });
+// Index: Mona Sans, whose width axis lets the project names stretch to the screen.
+const mona = Mona_Sans({ subsets: ["latin"], axes: ["wdth"], variable: "--font-mona" });
 
 export const metadata: Metadata = {
   title: "Nikolai Schunk — Software Engineer",
@@ -17,41 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* ── Aurora tuning — edit values here ───────────────────────────
-            blob1: teal  · blob2: indigo  · blob3: amber
-            opacity: 0–1 · blur: px · duration: CSS time string
-            drift values live in globals.css @keyframes aurora-1/2/3
-        ──────────────────────────────────────────────────────────── */}
-        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
-          <div
-            className="absolute -top-1/4 -left-1/4 w-[70vw] h-[70vw] rounded-full mix-blend-screen"
-            style={{
-              background: "radial-gradient(circle at center, #78c2ad 0%, transparent 70%)",
-              opacity: 0.18,
-              filter: "blur(120px)",
-              animation: "aurora-1 12s ease-in-out infinite alternate",
-            }}
-          />
-          <div
-            className="absolute -bottom-1/4 -right-1/4 w-[65vw] h-[65vw] rounded-full mix-blend-screen"
-            style={{
-              background: "radial-gradient(circle at center, #6366f1 0%, transparent 70%)",
-              opacity: 0.14,
-              filter: "blur(140px)",
-              animation: "aurora-2 16s ease-in-out infinite alternate",
-            }}
-          />
-          <div
-            className="absolute -top-1/3 -right-1/3 w-[50vw] h-[50vw] rounded-full mix-blend-screen"
-            style={{
-              background: "radial-gradient(circle at center, #f59e0b 0%, transparent 70%)",
-              opacity: 0.08,
-              filter: "blur(100px)",
-              animation: "aurora-3 20s ease-in-out infinite alternate",
-            }}
-          />
-        </div>
+      <body className={`${atkinson.variable} ${atkinsonMono.variable} ${mona.variable} antialiased`}>
         {children}
       </body>
     </html>
