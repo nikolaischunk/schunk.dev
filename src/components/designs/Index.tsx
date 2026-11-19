@@ -12,9 +12,9 @@ export default function Index() {
   const active = projects.find((p) => p.id === hover && p.image);
 
   return (
-    <div className="min-h-svh bg-[#eef1f0] px-5 text-[#0b0f0e] md:px-10">
+    <div className="min-h-svh bg-[#eef1f0] px-5 font-mona text-[#0b0f0e] md:px-10">
       <header className="flex flex-wrap items-baseline gap-x-6 gap-y-1 pb-16 pt-20 md:pt-8">
-        <h1 className="text-lg font-semibold">{me.personal.name}</h1>
+        <h1 className="mona-wide text-lg font-bold">{me.personal.name}</h1>
         <p className="text-black/55">
           {me.professional.role}, {me.personal.location.city}. {me.personal.tagline}
         </p>
@@ -32,11 +32,18 @@ export default function Index() {
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group grid gap-4 px-5 py-6 transition-colors hover:bg-accent md:grid-cols-[1fr_22rem] md:items-end md:px-10 md:py-8"
+              className="group grid gap-4 px-5 py-6 transition-colors hover:bg-accent active:bg-accent md:grid-cols-[1fr_22rem] md:items-end md:px-10 md:py-8"
             >
-              <span className="text-[13vw] font-bold leading-[0.9] tracking-[-0.05em] md:text-[8.5vw]">{p.name}</span>
+              <span className="mona-stretch min-w-0 text-balance text-[12.5vw] font-black uppercase leading-[0.88] tracking-[-0.02em] md:text-[5.6vw]">
+                {p.name}
+              </span>
+              {p.image && (
+                <span className="relative block aspect-[16/10] overflow-hidden rounded-md border-2 border-black md:hidden">
+                  <Image src={p.image} alt={p.name} fill sizes="100vw" className="object-cover" />
+                </span>
+              )}
               <span className="text-sm leading-relaxed text-black/65 group-hover:text-black">
-                <span className="mb-2 block font-mono text-xs uppercase tracking-widest">
+                <span className="mona-wide mb-2 block text-xs font-semibold uppercase tracking-wider">
                   {p.type} · {p.tech.join(", ")}
                 </span>
                 {p.description}
@@ -60,7 +67,7 @@ export default function Index() {
       )}
 
       <section id="about" className="grid gap-12 py-32 md:grid-cols-12">
-        <h2 className="text-4xl font-medium leading-[1.05] tracking-tight md:col-span-6 md:text-6xl">
+        <h2 className="mona-wide text-4xl font-bold leading-[1.02] tracking-tight md:col-span-6 md:text-6xl">
           {me.personal.motto}
         </h2>
         <div className="space-y-5 leading-relaxed text-black/65 md:col-span-5 md:col-start-8">
@@ -74,7 +81,7 @@ export default function Index() {
       <section className="grid gap-8 border-t border-black py-16 sm:grid-cols-2 md:grid-cols-4">
         {skillGroups.map(([label, items]) => (
           <div key={label}>
-            <h3 className="font-mono text-xs uppercase tracking-widest text-black/45">{label}</h3>
+            <h3 className="mona-wide text-xs font-semibold uppercase tracking-wider text-black/45">{label}</h3>
             <ul className="mt-4 space-y-1">
               {items.map((s) => (
                 <li key={s}>{s}</li>
@@ -87,9 +94,9 @@ export default function Index() {
       <section id="experience" className="border-t border-black">
         {me.professional.experience.map((e) => (
           <div key={e.role} className="grid gap-3 border-b border-black/15 py-10 md:grid-cols-12 md:gap-8">
-            <span className="font-mono text-sm text-black/45 md:col-span-2">{e.period}</span>
+            <span className="text-sm tabular-nums text-black/45 md:col-span-2">{e.period}</span>
             <div className="md:col-span-4">
-              <h3 className="text-2xl font-semibold">{e.role}</h3>
+              <h3 className="mona-wide text-2xl font-bold">{e.role}</h3>
               <p className="mt-1 text-sm text-black/55">{e.company}</p>
             </div>
             <p className="leading-relaxed text-black/65 md:col-span-5 md:col-start-8">{e.description}</p>
@@ -97,9 +104,9 @@ export default function Index() {
         ))}
         {me.human.activities.map((a) => (
           <div key={a.title} className="grid gap-3 border-b border-black/15 py-10 md:grid-cols-12 md:gap-8">
-            <span className="font-mono text-sm text-black/45 md:col-span-2">Outside work</span>
+            <span className="text-sm tabular-nums text-black/45 md:col-span-2">Outside work</span>
             <div className="md:col-span-4">
-              <h3 className="text-2xl font-semibold">{a.title}</h3>
+              <h3 className="mona-wide text-2xl font-bold">{a.title}</h3>
               {a.organization && <p className="mt-1 text-sm text-black/55">{a.organization}</p>}
             </div>
             <p className="leading-relaxed text-black/65 md:col-span-5 md:col-start-8">{a.description}</p>
@@ -110,7 +117,7 @@ export default function Index() {
       <footer id="contact" className="-mx-5 bg-accent px-5 py-24 md:-mx-10 md:px-10 md:py-32">
         <a
           href={`mailto:${me.contact.email}`}
-          className="block w-fit text-[9vw] font-bold leading-none tracking-[-0.05em] hover:underline md:text-[7vw]"
+          className="mona-stretch block w-fit break-all text-[10vw] font-black leading-[0.95] tracking-[-0.02em] hover:underline md:text-[6.5vw]"
         >
           {me.contact.email}
         </a>
@@ -124,7 +131,7 @@ export default function Index() {
               </li>
             ))}
           </ul>
-          <p className="font-mono text-xs text-black/60">
+          <p className="text-xs text-black/60">
             © {new Date().getFullYear()} · {me.personal.location.label}
           </p>
         </div>

@@ -3,9 +3,8 @@
 import { useSyncExternalStore } from "react";
 import Panel from "./Panel";
 import Index from "./Index";
-import Letter from "./Letter";
 
-const designs = ["panel", "index", "letter"] as const;
+const designs = ["panel", "index"] as const;
 type Design = (typeof designs)[number];
 
 const KEY = "schunk.design";
@@ -51,17 +50,11 @@ const icons: Record<Design, React.ReactNode> = {
       <path d="M3 15h13" />
     </g>
   ),
-  letter: (
-    <g stroke="currentColor" strokeWidth="1.3" strokeLinecap="round">
-      <path d="M6 4h8M6 7h8M6 10h8M6 13h5M6 16h7" />
-    </g>
-  ),
 };
 
 const labels: Record<Design, string> = {
   panel: "Panel layout",
   index: "Index layout",
-  letter: "Letter layout",
 };
 
 function Switcher({ current }: { current: Design }) {
@@ -100,7 +93,6 @@ export default function Designs() {
       <Switcher current={design} />
       {design === "panel" && <Panel />}
       {design === "index" && <Index />}
-      {design === "letter" && <Letter />}
     </>
   );
 }

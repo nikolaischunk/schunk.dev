@@ -6,9 +6,9 @@ import { me, projects, shortUrl, skillGroups, socials } from "./data";
 export default function Panel() {
   return (
     <div className="bg-[#0a0c0c] text-white md:grid md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-      <aside className="flex flex-col justify-between gap-16 bg-accent px-6 pb-10 pt-20 text-black md:sticky md:top-0 md:h-svh md:px-10 md:pt-10">
+      <aside className="flex flex-col justify-between gap-12 bg-accent px-5 pb-10 pt-20 text-black md:sticky md:top-0 md:h-svh md:px-10 md:pt-10">
         <div>
-          <h1 className="text-[17vw] font-bold leading-[0.85] tracking-[-0.05em] md:text-[7.5vw]">
+          <h1 className="text-[19vw] font-extrabold leading-[0.82] tracking-[-0.04em] md:text-[7.5vw]">
             Nikolai
             <br />
             Schunk
@@ -19,7 +19,7 @@ export default function Panel() {
         <div className="space-y-6">
           <a
             href={`mailto:${me.contact.email}`}
-            className="block w-fit text-2xl font-semibold underline decoration-2 underline-offset-4 hover:decoration-4 md:text-3xl"
+            className="hidden w-fit text-2xl font-bold underline md:block decoration-2 underline-offset-4 hover:decoration-4 md:text-3xl"
           >
             {me.contact.email}
           </a>
@@ -38,7 +38,7 @@ export default function Panel() {
         </div>
       </aside>
 
-      <main className="px-6 md:px-16">
+      <main className="px-5 pb-16 md:px-16 md:pb-0">
         <section id="projects" className="space-y-24 py-24">
           {projects.map((p) => (
             <article key={p.id}>
@@ -130,6 +130,15 @@ export default function Panel() {
           </a>
         </footer>
       </main>
+
+      {/* on phones the panel scrolls away, so the email stays one tap away down here */}
+      <a
+        href={`mailto:${me.contact.email}`}
+        className="fixed inset-x-0 bottom-0 z-[150] flex items-center justify-between border-t-2 border-accent bg-black/90 px-5 py-3 backdrop-blur md:hidden"
+      >
+        <span className="font-mono text-xs text-white/60">{me.personal.availability}</span>
+        <span className="font-bold text-accent">{me.contact.email}</span>
+      </a>
     </div>
   );
 }

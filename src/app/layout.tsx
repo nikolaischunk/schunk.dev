@@ -1,10 +1,12 @@
-import { Geist, Geist_Mono, Newsreader } from "next/font/google";
+import { Atkinson_Hyperlegible_Mono, Atkinson_Hyperlegible_Next, Mona_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
-const newsreader = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-newsreader" });
+// Panel: Atkinson Hyperlegible, drawn so no two letters can be mistaken for each other.
+const atkinson = Atkinson_Hyperlegible_Next({ subsets: ["latin"], variable: "--font-atkinson" });
+const atkinsonMono = Atkinson_Hyperlegible_Mono({ subsets: ["latin"], variable: "--font-atkinson-mono" });
+// Index: Mona Sans, whose width axis lets the project names stretch to the screen.
+const mona = Mona_Sans({ subsets: ["latin"], axes: ["wdth"], variable: "--font-mona" });
 
 export const metadata: Metadata = {
   title: "Nikolai Schunk — Software Engineer",
@@ -18,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} antialiased`}>
+      <body className={`${atkinson.variable} ${atkinsonMono.variable} ${mona.variable} antialiased`}>
         {children}
       </body>
     </html>

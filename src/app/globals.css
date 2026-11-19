@@ -11,9 +11,9 @@
 @theme inline {
   --color-accent: var(--accent);
   --color-accent-dim: var(--accent-dim);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-newsreader);
+  --font-sans: var(--font-atkinson);
+  --font-mono: var(--font-atkinson-mono);
+  --font-mona: var(--font-mona);
 }
 
 html {
@@ -23,7 +23,22 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+  font-family: var(--font-atkinson), system-ui, sans-serif;
+}
+
+/* Mona Sans widths: narrow enough to keep long names on a phone, wide on desktop. */
+.mona-stretch {
+  font-variation-settings: "wdth" 88;
+}
+
+.mona-wide {
+  font-variation-settings: "wdth" 112;
+}
+
+@media (min-width: 768px) {
+  .mona-stretch {
+    font-variation-settings: "wdth" 125;
+  }
 }
 
 ::selection {
