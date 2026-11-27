@@ -16,7 +16,7 @@ export const socials = [
   ["GitHub", me.contact.socials.github],
   ["LinkedIn", me.contact.socials.linkedin],
   ["Instagram", me.contact.socials.instagram],
-  ["Twitter", me.contact.socials.twitter],
+  // ["Twitter", me.contact.socials.twitter],
 ] as const;
 
 export const skillGroups = [
